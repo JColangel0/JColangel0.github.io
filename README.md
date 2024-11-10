@@ -1,2 +1,2 @@
-# potholeapp
-A simple app for pothole reporting
+# Improvement Map
+A map representing the nodes identified for improvement in Chicago
