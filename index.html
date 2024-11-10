@@ -1,69 +1,48 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Pothole Reporter</title>
-        <link rel="icon" type="image/x-icon" href="https://www.roadtrafficsigns.com/img/lg/K/pothole-slow-down-sign-k-0757.png">
-
-        <link rel="stylesheet" href="styles.css">
+        <title>Our Findings</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+        <style>
+            #map {
+                width:1200px;
+                height: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
-
-    <body class = "Main" id = "Main">
-        <h1 id="Title_Text" class="WhiteText">
-            Pothole Reporter
-            <img src="https://www.roadtrafficsigns.com/img/lg/K/pothole-slow-down-sign-k-0757.png" id="Header_Photo">
-        </h1>
-
-        <div id="Current_Potholes">
-            <p id="SubTitle_Text", class="WhiteText"> <b>Current Potholes in the World</b> </p>
-            <ol class="WhiteText">
-                <li> 34 Pine Ave. Sylvania, OH 43560 <br>
-                    <button onclick="showOnMap(41.6929765, -83.8129724)"> View On Map </button>
-                </li>
-                <li>7763 Buckingham Lane Collegeville, PA 19426 <br>
-                    <button onclick="showOnMap(40.1622996, -75.4634399)"> View On Map </button>
-                </li>
-                <li>129 Cactus Court Onalaska, WI 54650 <br>
-                    <button onclick="showOnMap(43.8833282, -91.2359932)"> View On Map </button>
-                </li>
-            </ol>
-        </div>
-
-        <div id="form" class="container">
-            <h1 id="Title_Text" class="WhiteText">Report:</h1>
-            <form action="/action_page.php">
-                <div id="left">
-                    <label class="WhiteText" for="name">Name:</label>
-                    <br>
-                    <input class="Margin" id="InputBox" type="text" name="name" placeholder="Your Name">
-                </div><br>
-                <div id="right">
-                    <label class="WhiteText" for="add">Address:</label>
-                    <br>
-                    <input class="Margin" id="InputBox" type="text" name="add" placeholder="Your Address">
-                </div><br>
-                <input class="Margin" id="SubmitBox" type="submit" value="Submit">
-            </form>
-        </div>
-
-        <div id="map" class="container2"></div>
+    <body>
+        <div id="map"></div>
 
         <script>
-            var map = L.map('map').setView([41.6929765, -83.8129724], 13);
+            var map = L.map('map').setView([39.97248050427137, -97.90030082982487], 5);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
 
-            function showOnMap(lat, lng)
+            function showOnMap(lng, lat, type, num)
             {
-                map.setView([lat, lng], 15);
-
-                L.marker([lat, lng]).addTo(map).bindPopup('Pothole Location').openPopup();
+                L.marker([lat,lng]).addTo(map).bindPopup("This region needs " + num + " more "+type+".").openPopup();
             }
+
+            showOnMap(-87.538, 41.743, "schools", "3");
+            showOnMap(-87.6254, 41.8982, "schools", "2");
+            showOnMap(-87.6308, 41.8719, "schools", "4");
+            showOnMap(-87.6264, 41.8353, "schools", "2");
+            showOnMap(-87.6131, 41.834, "schools", "2");
+            showOnMap(-87.6965, 41.841, "schools", "2");
+            showOnMap(-87.675, 41.8681, "schools", "7");
+            showOnMap(-87.5964, 41.7899, "hospitals", "2");
+            showOnMap(-87.5964, 41.7899, "schools", "5");
+            showOnMap(-87.6352, 41.83, "schools", "2");
+            showOnMap(-87.7177, 41.6877, "schools", "2");
+            showOnMap(-87.6206, 41.8267, "preccincts", "2");
+            showOnMap(-87.5722, 41.77, "schools", "2");
+            showOnMap(-87.6411, 41.9415, "schools", "3");
         </script>
     </body>
 </html>
