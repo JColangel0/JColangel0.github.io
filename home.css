@@ -1,0 +1,107 @@
+div.leftbar {
+    width: 25%;
+    margin:0;
+    background-color: #ebe3cd;
+    float: left;
+    padding-right: .5%;
+    padding-left: .5%;
+}
+
+div.subcolumn {
+    width: 80%;
+    float: right;
+}
+
+div.subcolumn > a {
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    color: #FFD700;
+    background-color: #0056D6;
+    font-family: 'Trebuchet MS';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    color:#FF0000;
+    margin-bottom: 0;
+}
+
+h2.sub {
+    font-family:'Trebuchet MS', 'Arial';
+    margin:0;
+    font-size: xx-large;
+    text-align: right;
+}
+
+p {
+    margin-top: 0;
+    font-family:'Trebuchet MS', 'Arial';
+    text-align: justify;
+}
+
+h2.title {
+    font-family:'Trebuchet MS', 'Arial';
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+footer {
+    height: 50px;
+}
+
+li {
+    font-family:'Trebuchet MS', 'Arial';
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 30px;
+    border:2px solid black;
+    box-shadow: 5px 5px 5px #aaaaaa;;
+}
+
+.black {
+    background-color: black;
+    color:white;
+}
+
+.yellow {
+    background-color: #F4AB2D;
+    color:white;
+}
+
+.blue {
+    background-color: #00BACE;
+    color: white;
+}
+
+.red {
+    background-color: #FF233C;
+    color:white;
+}
+
+ul {
+    margin-top: 40px;
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+}
+
+div.content > svg.render {
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+div.content {
+    width: 73%;
+    float: left;
+    height: 1000px;
+}
