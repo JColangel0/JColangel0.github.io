@@ -1,0 +1,32 @@
+body {
+    font-family:'Arial Narrow', Arial, sans-serif;
+    margin:0;
+    background-color: #ebe3cd;
+}
+
+nav {
+    background-color: black;
+    padding: 15px;
+}
+
+nav > a {
+    color: white;
+    padding: 14px 16px;
+}
+
+a.title {
+    font-family: "DRIPINK PERSONAL USE";
+    src: url("Fonts/drip.otf");
+    color:#FFFFFF;
+    font-size: 20px;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: KGHAPPY;
+    src: url("Fonts/KGHAPPY.ttf");
+}
